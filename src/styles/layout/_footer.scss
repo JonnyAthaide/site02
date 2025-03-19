@@ -1,0 +1,10 @@
+// src/styles/layout/_header.scss
+
+@use "../utils/vars" as vars; // Importando as variáveis aqui
+
+footer {
+  background-color: vars.$color-0; // Usando a variável do namespace vars
+  color: #fff;
+  padding: 1rem;
+  text-align: center;
+}

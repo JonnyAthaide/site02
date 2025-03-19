@@ -1,0 +1,21 @@
+// src/styles/main.scss
+
+// UTILS
+@use "utils/vars" as vars;
+@use "utils/reset";
+
+// BASE
+@use "base/utilities";
+@use "base/fonts";
+@use "base/typography";
+
+// LAYOUT
+@use "layout/header";
+
+// COMPONENTS
+@use "components/loading-screen";
+@use "components/button";
+@use "components/section-intro";
+@use "components/section-purpose";
+@use "components/section-services";
+@use "components/section-video";

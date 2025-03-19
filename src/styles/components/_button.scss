@@ -1,0 +1,11 @@
+// src/styles/components/_button.scss
+@use "../utils/vars" as vars;
+
+button {
+  background-color: vars.$color-0; // Usando a variável do namespace vars
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}

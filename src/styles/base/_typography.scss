@@ -1,0 +1,103 @@
+// src/styles/base/_typography.scss
+
+@use "../utils/vars" as vars;
+
+// Definindo as variáveis para o tamanho da fonte do h1
+:root {
+    --h1-min-font-size: 32; // Tamanho mínimo da fonte (em pixels)
+    --h1-max-font-size: 64; // Tamanho máximo da fonte (em pixels)
+    --h1-color-dark: #333333;
+    --h1-color-light: #eeece6;
+    --h2-max-font-size: 61;
+    --h2-min-font-size: 31;
+    --h2-color-dark: #333333;
+    --h2-color-light: #eeece6;
+    --h3-max-font-size: 42;
+    --h3-min-font-size: 28;
+    --h3-color-dark: #333333;
+    --h3-color-light: #eeece6;
+    --h4-max-font-size: 20;
+    --h4-min-font-size: 20;
+    --h4-color-dark: #262626;
+    --h4-color-light: #ffffff;
+    --h5-max-font-size: 18;
+    --h5-min-font-size: 18;
+    --h5-color-dark: #262626;
+    --h5-color-light: #ffffff;
+    --h6-max-font-size: 14;
+    --h6-min-font-size: 14;
+    --h6-color-dark: #262626;
+    --h6-color-light: #ffffff;
+}
+
+h1 {
+    font-size: var(--h1-min-font-size);
+
+    @media screen and (min-width: 320px) {
+        font-size: calc(var(--h1-min-font-size) * 1px + (var(--h1-max-font-size) - var(--h1-min-font-size)) * (100vw - 320px) / 1600);
+    }
+}
+
+h2 {
+    font-size: var(--h2-min-font-size);
+
+    @media screen and (min-width: 320px) {
+        font-size: calc(var(--h2-min-font-size) * 1px + (var(--h2-max-font-size) - var(--h2-min-font-size)) * (100vw - 320px) / 1600);
+    }
+}
+
+h3 {
+    font-size: var(--h3-min-font-size);
+
+    @media screen and (min-width: 320px) {
+        font-size: calc(var(--h3-min-font-size) * 1px + (var(--h3-max-font-size) - var(--h3-min-font-size)) * (100vw - 320px) / 1600);
+    }
+}
+
+h4 {
+    font-size: var(--h4-min-font-size);
+
+    @media screen and (min-width: 320px) {
+        font-size: calc(var(--h4-min-font-size) * 1px + (var(--h4-max-font-size) - var(--h4-min-font-size)) * (100vw - 320px) / 1600);
+    }
+}
+
+h5 {
+    font-size: var(--h5-min-font-size);
+
+    @media screen and (min-width: 320px) {
+        font-size: calc(var(--h5-min-font-size) * 1px + (var(--h5-max-font-size) - var(--h5-min-font-size)) * (100vw - 320px) / 1600);
+    }
+}
+
+h6 {
+    font-size: var(--h6-min-font-size);
+
+    @media screen and (min-width: 320px) {
+        font-size: calc(var(--h6-min-font-size) * 1px + (var(--h6-max-font-size) - var(--h6-min-font-size)) * (100vw - 320px) / 1600);
+    }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: vars.$font-main;
+    font-weight: 400;
+    line-height: 1.13;
+    letter-spacing: -2px;
+    text-transform: none;
+}
+
+title {
+    font-family: vars.$font-secondary;
+    font-size: 13px;
+    font-weight: 100;
+    letter-spacing: 7.6px;
+    word-spacing: 0.3em;
+    -webkit-text-stroke-color: #000;
+    stroke: #000;
+    color: #515151;
+}

@@ -1,0 +1,52 @@
+// src/styles/base/_utilities.scss
+
+@use "../utils/vars" as vars;
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: vars.$spacing-small;
+    padding-right: vars.$spacing-small;
+
+    @media (min-width: 768px) {
+        padding-left: vars.$spacing-medium;
+        padding-right: vars.$spacing-medium;
+    }
+
+    @media (min-width: 1024px) {
+        padding-left: vars.$spacing-large;
+        padding-right: vars.$spacing-large;
+    }
+}
+
+
+.full-screen-section {
+    width: 100%;
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.black {
+    transition: all 0.3s ease-in-out;
+    
+    &.black-active {
+        background-color: black !important;
+        color: white !important;
+        transition: all 0.3s ease-in-out;
+    }
+}
