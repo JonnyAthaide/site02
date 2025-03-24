@@ -2,16 +2,14 @@
 
 function handleScroll() {
   const sections = document.querySelectorAll('section.black');
-  const windowHeight = window.innerHeight;
-  const triggerPoint = windowHeight * 0.15; // 15% da altura da viewport
+  const scrollPosition = window.scrollY;
 
   sections.forEach(section => {
     const sectionTop = section.offsetTop;
     const sectionHeight = section.offsetHeight;
-    const scrollPosition = window.scrollY;
 
-    // Verifica se a seção está próxima do topo da viewport (15%)
-    if (scrollPosition + triggerPoint > sectionTop && scrollPosition < sectionTop + sectionHeight) {
+    // Verifica se o topo da seção está no topo da viewport
+    if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
       section.classList.add('black-active');
     } else {
       section.classList.remove('black-active');
@@ -21,6 +19,7 @@ function handleScroll() {
 
 function startScrollSections() {
   window.addEventListener('scroll', handleScroll);
+  // Chama a função uma vez no carregamento para verificar se alguma seção já está no topo
   handleScroll();
 }
 

@@ -1,0 +1,37 @@
+// src/styles/main.scss
+
+.intro-animation-container {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #f0f0f0;
+    /* Cor de fundo do contêiner */
+    border-radius: 20px;
+    padding: 40px;
+    text-align: center;
+    z-index: 999;
+    /* Fica abaixo do loading e acima do conteúdo */
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.5);
+    /* Começa pequeno e invisível */
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    pointer-events: none;
+
+    &.active {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1);
+        /* Anima para o tamanho normal */
+        pointer-events: auto;
+    }
+
+    .intro-animation-content {
+        opacity: 0;
+        transition: opacity 0.5s ease 0.5s;
+        /* Atraso de 0.5s para o texto */
+
+        &.active {
+            opacity: 1;
+        }
+    }
+}

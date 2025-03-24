@@ -1,6 +1,38 @@
 // src/styles/components/_button.scss
 @use "../utils/vars" as vars;
 
+// src/styles/components/_section-intro.scss
+
 .section-intro {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
   background-color: #ccc;
+
+  .section-intro-container {
+    position: relative;
+
+    h1 {
+      overflow: hidden; /* Esconde as palavras inicialmente */
+      white-space: pre-wrap;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+  
+      span {
+        display: inline-block; /* Permite animar cada palavra individualmente */
+        opacity: 0; /* Começa invisível */
+        transform: translateY(100%); /* Começa abaixo da linha */
+        animation: fadeInUp 0.5s ease forwards; /* Aplica a animação */
+      }
+    }
+  }
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1; /* Fica visível */
+    transform: translateY(0); /* Volta para a posição original */
+  }
 }

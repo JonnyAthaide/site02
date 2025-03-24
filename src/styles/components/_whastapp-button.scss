@@ -1,0 +1,93 @@
+.whatsapp-container {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+
+    .whatsapp-button-icon {
+        background-color: #25d366;
+        border-radius: 50%;
+        width: 60px;
+        height: 60px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+        cursor: pointer;
+        transition: transform 0.3s ease;
+
+        &:hover {
+            transform: scale(1.1);
+        }
+
+        img {
+            width: 30px;
+            height: 30px;
+        }
+    }
+
+    .whatsapp-box {
+        position: absolute;
+        bottom: 70px;
+        right: 0;
+        background-color: #fff;
+        border-radius: 10px;
+        box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+        width: 300px;
+        opacity: 0;
+        transform: translateY(20px);
+        transition: opacity 0.3s ease, transform 0.3s ease;
+        pointer-events: none;
+        /* Impede cliques no box quando ele está oculto */
+
+        &.active {
+            opacity: 1;
+            transform: translateY(0);
+            pointer-events: auto;
+            /* Permite cliques no box quando ele está visível */
+        }
+
+        .whatsapp-box-header {
+            display: flex;
+            align-items: center;
+            padding: 10px;
+            border-bottom: 1px solid #eee;
+
+            img {
+                width: 24px;
+                height: 24px;
+                margin-right: 10px;
+            }
+        }
+
+        .whatsapp-box-content {
+            padding: 10px;
+
+            p {
+                margin-bottom: 10px;
+            }
+
+            .whatsapp-box-button {
+                background-color: #25d366;
+                color: #fff;
+                padding: 10px;
+                border-radius: 5px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                text-decoration: none;
+                transition: background-color 0.3s ease;
+
+                &:hover {
+                    background-color: darken(#25d366, 10%);
+                }
+
+                img {
+                    width: 20px;
+                    height: 20px;
+                    margin-right: 10px;
+                }
+            }
+        }
+    }
+}

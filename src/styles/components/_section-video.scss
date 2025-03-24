@@ -2,5 +2,38 @@
 @use "../utils/vars" as vars;
 
 .section-video {
-  background-color: #DDD;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+  max-width: 1920px;
+  aspect-ratio: 16/9;
+  
+
+  // .video-background {
+  //   position: absolute;
+  //   top: 50%;
+  //   left: 50%;
+  //   min-width: 100%;
+  //   min-height: 100%;
+  //   width: auto;
+  //   height: auto;
+  //   transform: translate(-50%, -50%);
+  //   z-index: 1;
+  //   /* Garante que o vídeo fique atrás do conteúdo */
+  //   object-fit: cover;
+  // }
+
+  // .video-content {
+  //   position: relative;
+  //   z-index: 2;
+  //   /* Garante que o conteúdo fique sobre o vídeo */
+  //   color: #fff;
+  //   /* Cor do texto sobre o vídeo */
+  //   text-align: center;
+  //   padding: 20px;
+  // }
 }

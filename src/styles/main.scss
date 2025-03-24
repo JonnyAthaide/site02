@@ -14,8 +14,11 @@
 
 // COMPONENTS
 @use "components/loading-screen";
+// @use "components/animation-container";
 @use "components/button";
+@use "components/logo";
 @use "components/section-intro";
 @use "components/section-purpose";
 @use "components/section-services";
 @use "components/section-video";
+@use "components/whastapp-button";

@@ -11,26 +11,34 @@
 
   <!-- Tela de Carregamento -->
   <div id="loading-screen">
-    <div class="loading-circle">
-      <div class="loading-percentage">0%</div>
-    </div>
+    <div class="loading-circle"></div>
+    <div class="loading-percentage">0%</div>
   </div>
 
   <main>
-    <section class="section-intro full-screen-section">
+    <section class="section-intro">
       <div class="container">
-        <h1>Mais do que uma agência, o resultado que você precisa, * vendas, engajamento real, clareza na comunicação,
-          presença de marca e velocidade. aqui sua empresa é a protagonista!</h1>
+        <div class="section-intro-container full-screen-section">
+          <a href="/" class="logo"></a>
+          <h1>Mais do que uma agência, o resultado que você precisa, * vendas, engajamento real, clareza na comunicação, presença de marca e velocidade. aqui sua empresa é a protagonista!</h1>
+        </div>
       </div>
     </section>
 
-    <section class="section-video full-screen-section black">
-      <div class="container">
-        <h2>Criamos experiências,
-          valorizamos marcas,
-          construímos conexões.</h2>
-      </div>
+    <section class="section-video full-screen-section">
+        <video class="video-background" controls muted loop playsinline>
+          <source src="/public/example.mp4" type="video/mp4">
+          <source src="/public/example.webm" type="video/webm">
+          Seu navegador não suporta a tag de vídeo.
+        </video>
+        
+        <!-- <div class="video-content">
+          <h2>Criamos experiências,
+            valorizamos marcas,
+            construímos conexões.</h2>
+        </div> -->
     </section>
+    
 
     <section class="section-purpose full-screen-section">
       <div class="container">
@@ -55,6 +63,26 @@
       <p>Rodapé</p>
     </div>
   </footer>
+
+<div class="whatsapp-container">
+  <div class="whatsapp-button-icon">
+    <img src="/assets/whatsapp.svg" alt="WhatsApp">
+  </div>
+  <div class="whatsapp-box">
+    <div class="whatsapp-box-header">
+      <img src="/assets/whatsapp.svg" alt="WhatsApp">
+      <p>Precisa de ajuda?</p>
+    </div>
+    <div class="whatsapp-box-content">
+      <p>Olá! Clique no botão abaixo para iniciar uma conversa no WhatsApp.</p>
+      <a href="https://api.whatsapp.com/send?phone=5511999999999&text=Ol%C3%A1,%20vim%20pelo%20site!" class="whatsapp-box-button" target="_blank" rel="noopener noreferrer">
+        <img src="/assets/whatsapp.svg" alt="WhatsApp">
+        <span>Iniciar Conversa</span>
+      </a>
+    </div>
+  </div>
+</div>
+
 
   <script type="module" src="./src/js/main.js"></script>
 
